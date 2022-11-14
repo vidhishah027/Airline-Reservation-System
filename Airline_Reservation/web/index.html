@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-image:url('images/21.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    color:white;
+            }
+            a:visited{
+                color:bisque;
+            }
+            footer{
+                color:darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align='center'>Welcome Airline Reservation</h1>
+        <form method="post" action="loginservlet">
+            <table align='center'>
+                <tr>
+                    <td> <h3>User Name</h3></td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td><h3>Password</h3></td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="LOGIN"></td>
+                    <td><input type="submit" value="REGISTER" formaction="registration.jsp"></td>
+                </tr>
+                <!-- <%
+            try{
+                 String lname = request.getParameter("lname");
+                String password = request.getParameter("password");
+                 Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airline","root","");
+                Statement st = con.createStatement();
+                String sq = "select * from user where lname='"+lname+"' and password='"+password+"'";
+                ResultSet rs = st.executeQuery(sq);
+                if(rs.next())
+                {
+                    out.println("<html>");
+                        out.print("<head>");
+                             session.setAttribute("username",lname);
+                            out.print("<h3>Welcome "+lname+"</h3>");
+                            out.print("<br><a href='Home.jsp'>Click Here to Continoue..</a>");
+                        out.print("</head>");
+                    out.print("</body>");
+                }
+                else
+                {
+                    out.print("Invalid Login<br>");
+                    out.print("<a href='index.html'>Try Again</a>");
+                }
+            }
+            catch(Exception e){
+                out.print("Invalid Insertion<br>");
+                out.print("<a href='index.html'>Try Again</a>");
+            }
+            
+        %>-->
+            </table>
+         </form>
+       
+    </body>
+</html>
